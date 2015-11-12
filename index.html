@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Práctica final - Creativa</title>
+		<script src="js/modernizr.js"></script>
+		<link rel="stylesheet" type="text/css" media="all" href="estilo/style.css" />
+	</head>
+
+	<body>
+
+		<header class="principal">
+
+			<!--Agrupo el contenido de la web, que está por filas, con un div y le doy una class -->
+			<div class="fila">
+				<!---pongo el nombre del logotipo (Práctica) y ya con el css cambio el texto (Práctica) por una imagen, que será el logo. Como no nos interesa a dónde enlaza, ponemos almohadilla. Para poder cambiar ese texto por una imagen, creo una class para luego decirle al css que cambie los textos de esta clase por la imagen-->
+				<a href="#" class="logo_principal">Práctica</a>
+				<!--después del logo viene un pequeño menú, que creo con un <nav> y le doy una class porque no quiero que todos los nav se vean iguales en la pag. web-->
+				<nav class="navegacion_principal">
+
+					<ul>
+					<!--Como es un menú de navegación, cada elemento tiene que ser un enlace a otra pág.-->
+						<li><a href="#">Inicio</a></li>
+						<li><a href="#">Nosotros</a></li>
+						<li><a href="#">Destacados</a></li>
+						<li><a href="#">Trabajos</a></li>
+						<li><a href="#">Contacto</a></li>
+					</ul>
+				</nav>
+				
+				<!--Dentro del menú de nav, hay otro pequeño menú que está en el extremo izquierdo. Creo por tanto otro menú en otro nav distinto. Este nuevo menú va a tener su propia class y la class del menú anterior (navegacion_principal), que define los aspectos generales que comparten los dos tipos de menú. Tendrá a su vez una class propia llamada right (como he dicho antes),porque el menú 1 lo tendremos que alinear hacia la derecha, y el 2 hacia la izquierda-->
+				
+				<nav class="navegacion_principal right">
+					<ul>
+						<li><a href="#">Blog</a></li>
+						<!--este es el punto, que tiene un código especial-->
+						<li>&bull;</li>
+						<li><a href="#">Clientes</a></li>
+					</ul>
+				</nav>
+				<!--Ya hemos terminado el navegador, por tanto cerramos el div-->
+
+			</div>
+
+		</header>
+
+
+
+<!--Abrimos una nueva división para la nueva fila de la p web. Como es una parte característica y única le damos un id. No es una única imagen, sino que está compuesto por tres imágenes. Para montar las imágenes hacemos tres div que van a estar todos en la misma posición y los montamos un div encima de otro-->
+	<div id="imagen_principal">
+		<!--Dentro del div principal metemos otro div nuevo-->
+		<div class="manchas">
+		<!-- a su vez va a tener dentro otra divisisión, que será la foto de los triángulos-->
+			<div class="triangulos">
+		<!--y a su vez va a tener dentro otra división que será la de la ciudad. Así tenemos las tres dentro de la misma posición y por css las vamos a dejar las tres en el mismo sitio-->
+				<div class="ciudad">
+		<!--dentro de estos div metemos ya nuestro contenido con otro div para meter el texto que hay encima de la imagen. Con css se dan las propiedades gráfica s a las imágenes, pero el texto se escribe en el html-->
+					<div class="fila">
+						<h2>Construyamos algo junto. Como una ciudad... o tal vez tu WEB!</h2>
+		<!--Ahora queda el botón que es un enlace-->
+						<a href="#" class="boton">Vamos</a>
+					</div>
+				</div>
+			</div>
+		</div>	
+
+	</div>	
+
+
+
+<!--Tenemos una nueva sección, que es una pequeña introducción. Le ponemos una class para poder referirnos a ella en el css. Dentro de esta sección va a haber una nueva fila con div-->
+	<section class="introduccion">
+
+		<div class="fila">
+			<p>¡Hola! Soy alumno de la escuela técnica de Seis Cocos.
+				Lo hacemos bien, diseños limpios. <strong>¡Echa un vistazo!</strong> <!--Hemos metido <stron> para luego poder referirnos a ella en el css y no liarla más. No porque vaya en negrita--><!--Ahora ponemos un link para el botón que hay y le damos una class para poder pintar ese botón-->
+				<a href="#" class="boton_trabajos">Trabajos</a>
+		</div>
+
+	</section>
+
+
+
+<!--Siguiente parte, por lo que hacemos otra división para ella con div. Esto es ya el contenido principal. Hacemos una especie de contenedor que va a contener todo el texto para poder centrarlo en el navegador. Como en la última clase de layout, que centrábamos el contenido en la pág. Creo un contenedor y dentro metemos otro div para centrarlo-->
+<!--creamos una nueva división-->
+	<div class="cuerpo"> 
+<!--creamos otra división que va a ser una fila con la class fila, pero además como hay que centrarlo, le damos otra class que se llamará centrado-->
+		<div class="fila centrado">
+<!--Pero ahora, vemos que esta fila tiene tres partes, columnas. Por ello hacemos 3 divisiones más-->
+			<div class="primera_columna">
+<!--y la 1ª columna tiene dentro un título, un contenido y un botón-->
+				<h2>Diseño web profesional</h2>
+				<p>Durante el curso, hemos podidos comprobar que es tan importante el resultado como la técnica utilizada.
+
+					<br> <!--esto es un enter-->
+					</br>
+
+				El diseño web requiere de un esfuerzo creativo y estétivo que puede ser logrado haciendo uso de las herramientas más comunes. Con esfuerzo y técnica, lograremos crear una página web y separar la semántica y la estética, hacíéndolos legibles para un futuro desarrollo.
+				<!--Dentro de <p> metemos ese link que era un botón y le damos class para poder pintarlo en css-->
+				<a href="#" class="leer_mas">Leer Más</a>
+				</p>
+
+			</div>
+<!--creamos ahora la segunda columna, que tiene un título con una lista-->
+			<div class="segunda_columna">
+			<h2>Ya sabemos...</h2>
+			<!--he aquí la importancia de darle class a las listas ul porque no quiero que esta lista sea igual a la lista del menú de nav principal-->
+			<ul class="sabemos">
+				
+				<li>Desarrollar con HTML5</li>
+				<li>Plasmar creatividad con CSS3</li>
+				<li>Comprender el ecosistema HTML5</li>
+				<li>Respetar la semántica y la estética</li>
+				<li>Recurrir a webs de interés</li>
+				<li>Desarrollos visualmente complejos</li>
+				<li>Escuchar música jazz</li>
+			
+			</ul>
+
+			</div>
+<!--ultima columna. ponemos class segunda columna para que la lista sea igual y además última columna, para aplicarle las propiedades que le sean propias-->
+			<div class="segunda_columna ultima_columna"></div>
+				<h2>Datos de contacto</h2>
+				<ul>
+					<li>Nombre y apellidos</li>
+					<li>Alumno de Seis Cocos</li>
+					<li>tlf. (555) 555-555</li>
+					<li>fax. (555) 555-555</li>
+					<li>email email@seiscocos.com</li>
+				</ul>
+
+		</div>
+
+	</div>
+
+<!--vamos a por la siguiente fila, que son varias imágenes. Le damos class fila, pero también su class propia porque tendrá características muy particulares que será tecnologias_utilizadas-->
+	<div class="fila tecologias_utilizadas">
+
+		<h2>Tecnologías utilizadas</h2>	
+<!--podemos hacerlo como un menú con una lista de cuatro imágenes y con el css hacemos que se pongan una detrás de otra. Como comparte cosas con lo anterior, ponemos class segunda_columna. ponemos un enlace y colocamos la img dentro de la lista (twitter sublime...)-->
+		<ul>
+			<li class="segunda_columna"><a href="#"><img src="imagenes/html5.png" /></a></li>
+			<li class="segunda_columna"><a href="#"><img src="imagenes/css3.png" /></a></li>
+			<li class="segunda_columna"><a href="#"><img src="imagenes/sublime.png" /></a></li>
+			<li class="segunda_columna ultima_columna"><a href="#"><img src="imagenes/recursos.png" /></a></li>
+
+		</ul>
+	</div>
+
+
+
+<!--queda el footer. Como está todo centrado hacemos la misma táctica de la clase de layout, hacer un div como contenedor con class cuerpo, que ya está creado-->
+<footer>
+	<div class="cuerpo">
+		<!--creamos dos partes, y lo hacemos con dos div-->
+		<div class="fila">
+			<div class="conectar"> <!--colocamos un enlace a twitter. Para conseguir el aspecto de hover(cambia el color cuando pasas el ratón por encima) creamos una class.-->
+				
+				<a href="#" class="social" target="_blank">
+					<!--le damos dos class a la img de twitter, una para cuando el ratón no está encima de ella y otra cuando sí lo está y le damos dos imágenes tb una para cuando está el ratón encima y otra cuando no-->
+					<img class="rollout" src="imagenes/twitter.png" /><!--raton no encima-->
+					<img class="rollover" src="imagenes/twitter_hover.png" />
+				</a>
+					<!--repetimos el mismo proceso para el botón de g+-->
+				<a href="#" class="social" target="_blank">
+					<img class="rollout" src="imagenes/gplus.png" />
+					<img class="rollover" src="imagenes/gplus_hover.png" />
+				</a>
+			</div>
+
+<!--creamos la nueva división dentro del footer y le damos la misma class que la parte de contenido que tenía los datos de contacto, así tienen el mismo aspecto, y que además tenga los datos de alineación como el menú dos del nav principal, para que estén a la derecha alineados-->
+			<div class="segunda_columna ultima_columna right ">
+				<!--colocamos el logo y en el css sustituimos el texto por la imagen-->
+				<a class="logo_inferior" href="#">Práctica final - Diseño web</a>
+				<div class="direccion">
+					<span class="calle">
+					
+						Numero 555-555
+					</span>
+					<span class="localidad">Mi casa. España</span>
+				</div>
+				<div class="tel">(555) 555-555</div>
+
+			</div>
+
+		</div>
+
+	</div>
+</footer>
+</body>
+
+</html>
